@@ -1,0 +1,137 @@
+/* Resetuj box-sizing dla wszystkich elementów */
+* {
+    box-sizing: border-box;
+}
+
+/* Style dla body */
+body {
+    /* Usunięcie marginesu */
+    margin: 0;
+    /* Pełna wysokość okna przeglądarki */
+    min-height: 100vh;
+    /* Flexbox do centrowania */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Kolor tła */
+    background-color: #f0f0f0;
+}
+
+/* Kontener na kalkulator i wykres */
+.container {
+    /* Flex layout */
+    display: flex;
+    /* Spacing między elementami */
+    gap: 30px;
+    /* Wyrównaj do góry */
+    align-items: flex-start;
+    /* Wewnętrzny spacing */
+    padding: 20px;
+}
+
+/* Style kalkulatora */
+.calc {
+    /* Szerokość */
+    width: 600px;
+    /* Ramka */
+    border: solid 2px #555;
+    border-radius: 10px;
+    /* Kolor tła */
+    background-color: #888;
+    padding: 20px;
+    /* Grid layout */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 80px;
+    gap: 20px;
+}
+
+/* Style wyświetlacza wyniku */
+.calc_result {
+    /* Rozciągnij na całą szerokość */
+    grid-column: 1 / -1;
+    /* Ciemne tło */
+    background-color: #333;
+    /* Biały tekst */
+    color: #fff;
+    /* Rozmiar czcionki */
+    font-size: 56px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style przycisków */
+.calc_btn {
+    /* Bez ramki */
+    border: none;
+    border-radius: 5px;
+    /* Jasne tło */
+    background-color: #eee;
+    /* Rozmiar tekstu */
+    font-size: 32px;
+    /* Cień */
+    box-shadow: 2px 2px 5px #555;
+    /* Kursor na wskaźnik */
+    cursor: pointer;
+}
+
+/* Efekt hover */
+.calc_btn:hover {
+    /* Przezroczystość */
+    opacity: 0.8;
+}
+
+/* Efekt aktywny */
+.calc_btn:active {
+    /* Zmniejszony cień */
+    box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.5);
+}
+
+/* Style przycisków operatorów */
+.calc_btn_operator {
+    /* Pomarańczowe tło */
+    background-color: #ffa500;
+    color: #fff;
+}
+
+/* Style przycisków resetowania */
+.calc_btn_reset {
+    /* Czerwone tło */
+    background-color: #ff4500;
+    color: #fff;
+}
+
+/* Style przycisku równości */
+.calc_btn_equal {
+    /* Zielone tło */
+    background-color: #32cd32;
+    color: #fff;
+    /* Rozciągnij na 2 ostatnie kolumny */
+    grid-column: 2 / -1;
+}
+
+/* Style przycisków funkcji trygonometrycznych */
+.calc_btn_trig {
+    /* Jasne niebieskie tło */
+    background-color: #00bfff;
+    color: #fff;
+}
+
+/* Kontener dla wykresu */
+.chart-container {
+    /* Wymiary */
+    width: 500px;
+    height: 400px;
+    /* Białe tło */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* Cień */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style canvas */
+canvas {
+    /* Maksymalnie pełna szerokość */
+    max-width: 100%;
+}

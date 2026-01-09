@@ -1,0 +1,76 @@
+<!-- Typ dokumentu HTML5 -->
+<!DOCTYPE html>
+<!-- Język angielski -->
+<html lang="en">
+<head>
+    <!-- Kodowanie UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Responsywność -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Arkusz stylów CSS -->
+    <link rel="stylesheet" href="kalkulator.css">
+    <!-- Biblioteka Chart.js do wykresów -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Tytuł strony -->
+    <title>Kalkulator</title>
+</head>
+<body>
+    <!-- Główny kontener -->
+    <div class="container">
+        <!-- Kalkulator -->
+        <article class="calc">
+            <!-- Wyświetlacz wyniku -->
+            <output class="calc_result" id="result"></output>
+
+            <!-- Rząd 1: cyfry 7, 8, 9 i operator + -->
+            <button type="button" class="calc_btn">7</button>
+            <button type="button" class="calc_btn">8</button>
+            <button type="button" class="calc_btn">9</button>
+            <button type="button" class="calc_btn calc_btn_operator">+</button>
+
+            <!-- Rząd 2: cyfry 4, 5, 6 i operator - -->
+            <button type="button" class="calc_btn">4</button>
+            <button type="button" class="calc_btn">5</button>
+            <button type="button" class="calc_btn">6</button>
+            <button type="button" class="calc_btn calc_btn_operator">-</button>
+
+            <!-- Rząd 3: cyfry 1, 2, 3 i operator * -->
+            <button type="button" class="calc_btn">1</button>
+            <button type="button" class="calc_btn">2</button>
+            <button type="button" class="calc_btn">3</button>
+            <button type="button" class="calc_btn calc_btn_operator">*</button>
+
+            <!-- Rząd 4: cyfry 0, . i operator / -->
+            <button type="button" class="calc_btn">0</button>
+            <button type="button" class="calc_btn">.</button>
+            <button type="button" class="calc_btn">00</button>
+            <button type="button" class="calc_btn calc_btn_operator">/</button>
+
+            <!-- Rząd 5: nawiasy, reset i operator x2 -->
+            <button type="button" class="calc_btn">(</button>
+            <button type="button" class="calc_btn">)</button>
+            <button type="button" class="calc_btn calc_btn_reset">C</button>
+            <button type="button" class="calc_btn calc_btn_operator">x2</button>
+
+            <!-- Rząd 6: funkcje trygonometryczne, log, exit i równość -->
+            <button type="button" class="calc_btn calc_btn_trig" data-func="sin">sin</button>
+            <button type="button" class="calc_btn calc_btn_trig" data-func="cos">cos</button>
+            <button type="button" class="calc_btn calc_btn_trig" data-func="tan">tan</button>
+            <button type="button" class="calc_btn calc_btn_operator">log</button>
+
+            <!-- Ostatni rząd: exit i równość -->
+            <button type="button" class="calc_btn calc_btn_reset">Exit</button>
+            <button type="button" class="calc_btn calc_btn_equal">=</button>
+        </article>
+
+        <!-- Kontener na wykres -->
+        <div class="chart-container">
+            <!-- Canvas do rysowania wykresu -->
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Skrypt JavaScript -->
+    <script src="kalkulator.js"></script>
+</body>
+</html>
